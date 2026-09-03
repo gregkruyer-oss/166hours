@@ -27,9 +27,7 @@
       font-size: 14px;
       margin-bottom: 30px;
     }
-    .back-link:hover {
-      color: #ffffff;
-    }
+    .back-link:hover { color: #ffffff; }
     h1 {
       font-size: 36px;
       font-weight: 800;
@@ -41,13 +39,27 @@
       line-height: 1.6;
       color: #cccccc;
       margin-bottom: 30px;
-      text-align: left;
     }
+    .pay-button {
+      display: block;
+      background-color: #0070f3;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      transition: background-color 0.2s ease;
+    }
+    .pay-button:hover { background-color: #0060df; }
+    .paypal-btn { background-color: #003087; }
+    .paypal-btn:hover { background-color: #001c64; }
     .bank-details {
       background-color: #1a1a1a;
       padding: 20px;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 25px;
+      text-align: left;
     }
   </style>
 </head>
@@ -59,8 +71,11 @@
     <div class="body-text">
       <p>The manual is free.<br>Reaching the next Governor with it is not.</p>
       
+      <a href="YOUR_PAYFAST_LINK" class="pay-button">GIVE VIA PAYFAST</a>
+      <a href="YOUR_PAYPAL_LINK" class="pay-button paypal-btn">GIVE VIA PAYPAL</a>
+
       <div class="bank-details">
-        <strong>Banking Details</strong><br><br>
+        <strong>Direct Bank Transfer (EFT)</strong><br><br>
         Account Name: [Account Name]<br>
         Bank: [Bank Name]<br>
         Account Type: [Account Type]<br>
