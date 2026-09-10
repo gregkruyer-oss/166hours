@@ -4,84 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Give | 166 Hours</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0d0d0d;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0B0E14;
       color: #ffffff;
       margin: 0;
       padding: 60px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .back-link {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #D4AF37;
+    }
+
+    .container {
+      max-width: 550px;
+      width: 100%;
       text-align: center;
     }
-    .container {
-      max-width: 680px;
-      width: 100%;
-    }
-    .back-link {
-      display: inline-block;
-      color: #888888;
-      text-decoration: none;
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-    .back-link:hover { color: #ffffff; }
+
+    /* 3D Metallic Title Matching Cover Depth */
     h1 {
-      font-size: 36px;
-      font-weight: 800;
-      margin: 0 0 20px 0;
-      letter-spacing: 1px;
+      font-family: 'Futura', 'Montserrat', Arial, sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #FFE8B2 0%, #D4AF37 40%, #8A6510 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* CSS 3D Bevel Projection */
+      text-shadow: 
+        0px 1px 0px #AA7C11,
+        0px 2px 0px #8A6510,
+        0px 3px 0px #664A0B,
+        0px 4px 10px rgba(0, 0, 0, 0.8);
     }
-    .body-text {
-      font-size: 15px;
+
+    .subtitle {
+      color: #CBD5E1;
+      font-size: 1.05rem;
       line-height: 1.6;
-      color: #cccccc;
       margin-bottom: 30px;
     }
-    .pay-button {
-      display: block;
-      background-color: #0070f3;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 16px 20px;
-      border-radius: 8px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: background-color 0.2s ease;
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 35px;
     }
-    .pay-button:hover { background-color: #0060df; }
-    .paypal-btn { background-color: #003087; }
-    .paypal-btn:hover { background-color: #001c64; }
-    .bank-details {
-      background-color: #1a1a1a;
-      padding: 20px;
+
+    .gold-btn {
+      background: linear-gradient(180deg, #D4AF37 0%, #AA7C11 100%);
+      color: #0B0E14;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 16px 20px;
+      border-radius: 6px;
+      border: 1px solid #F3E5AB;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+    }
+
+    .gold-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .eft-card {
+      background-color: #121824;
+      border: 1px solid #2D3748;
       border-radius: 8px;
-      margin-top: 25px;
+      padding: 25px;
       text-align: left;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .eft-card h3 {
+      color: #D4AF37;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #2D3748;
+      padding-bottom: 10px;
+    }
+
+    .eft-details {
+      color: #E2E8F0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .eft-details strong {
+      color: #94A3B8;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to 166 Hours</a>
-    <h1>GIVE</h1>
-    <div class="body-text">
-      <p>The manual is free.<br>Reaching the next Governor with it is not.</p>
-      
-      <a href="YOUR_PAYFAST_LINK" class="pay-button">GIVE VIA PAYFAST</a>
-      <a href="YOUR_PAYPAL_LINK" class="pay-button paypal-btn">GIVE VIA PAYPAL</a>
+  <a href="index.html" class="back-link">&larr; Back to 166 Hours</a>
 
-      <div class="bank-details">
-        <strong>Direct Bank Transfer (EFT)</strong><br><br>
-        Account Name: [Account Name]<br>
-        Bank: [Bank Name]<br>
-        Account Type: [Account Type]<br>
-        Account Number: [Account Number]<br>
-        Branch Code: [Branch Code]<br>
-        Reference: 166HOURS
+  <div class="container">
+    <h1>GIVE</h1>
+
+    <div class="subtitle">
+      The manual is free.<br>
+      Reaching the next Governor with it is not.
+    </div>
+
+    <div class="button-group">
+      <a href="YOUR_PAYFAST_LINK" class="gold-btn">Give via PayFast</a>
+      <a href="YOUR_PAYPAL_LINK" class="gold-btn">Give via PayPal</a>
+    </div>
+
+    <div class="eft-card">
+      <h3>Direct Bank Transfer (EFT)</h3>
+      <div class="eft-details">
+        <strong>Account Name:</strong> [Account Name]<br>
+        <strong>Bank:</strong> [Bank Name]<br>
+        <strong>Account Type:</strong> [Account Type]<br>
+        <strong>Account Number:</strong> [Account Number]<br>
+        <strong>Branch Code:</strong> [Branch Code]<br>
+        <strong>Reference:</strong> 166HOURS
       </div>
     </div>
   </div>
