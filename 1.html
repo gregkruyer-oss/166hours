@@ -57,7 +57,7 @@
       margin-bottom: 40px;
     }
 
-    form {
+    .form-box {
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -81,7 +81,6 @@
       color: #64748B;
     }
 
-    button[type="submit"],
     .submit-btn {
       background: linear-gradient(180deg, #D4AF37 0%, #AA7C11 100%);
       color: #0B0E14;
@@ -98,9 +97,12 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       width: 100%;
       margin-top: 10px;
+      text-decoration: none;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
     }
 
-    button[type="submit"]:hover,
     .submit-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
@@ -129,13 +131,13 @@
     <h1>GET THE MANUAL</h1>
     <div class="subtitle">A Piece of Plastic.</div>
 
-    <form action="#" method="POST">
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="first_name" placeholder="First Name" required>
-      <input type="text" name="surname" placeholder="Surname" required>
+    <div class="form-box">
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Surname" required>
       
-      <button type="submit" class="submit-btn">Download now</button>
-    </form>
+      <a href="download.html" class="submit-btn">Download now</a>
+    </div>
 
     <div class="built-with">Built with Kit</div>
 
