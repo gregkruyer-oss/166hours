@@ -39,6 +39,73 @@
             color: #cbd5e1;
             margin-bottom: 40px;
         }
+        .form-box {
+            background: #121826;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            letter-spacing: 0.05em;
+        }
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        input:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        .error-msg {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+        }
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            color: #0b0b0f;
+            border: none;
+            padding: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+            transition: opacity 0.2s ease;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        
+        /* Download Section (Hidden until valid form submission) */
+        #download-section {
+            display: none;
+        }
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -58,6 +125,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
             transition: transform 0.2s ease, opacity 0.2s ease;
+            text-align: left;
         }
         .btn:hover {
             transform: translateY(-2px);
@@ -79,28 +147,112 @@
 </head>
 <body>
     <div class="container">
-        <h1>CHOOSE YOUR FORMAT</h1>
-        <div class="subtitle">Thank you for joining. Select your preferred format below to download your copy instantly:</div>
 
-        <div class="btn-group">
-            <!-- Direct Auto-Download PDF -->
-            <a href="166Hours.pdf" class="btn" download>
-                <div class="btn-title">Download PDF Edition</div>
-                <div class="btn-subtitle">Instant device download for desktop or tablet.</div>
-            </a>
+        <!-- STEP 1: INFORMATION GATE FORM -->
+        <div id="form-section">
+            <h1>GET THE MANUAL</h1>
+            <div class="subtitle">Enter your details below to unlock your resources.</div>
+            
+            <div class="form-box">
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" placeholder="e.g. name@example.com">
+                    <div id="emailError" class="error-msg">Please enter a valid email address.</div>
+                </div>
 
-            <!-- Direct Auto-Download ePub -->
-            <a href="166Hours.epub" class="btn" download>
-                <div class="btn-title">Download ePub Edition</div>
-                <div class="btn-subtitle">Optimized for Apple Books, Kindle, and e-readers.</div>
-            </a>
+                <div class="form-group">
+                    <label for="userFirst">First Name</label>
+                    <input type="text" id="userFirst" placeholder="e.g. John">
+                    <div id="firstError" class="error-msg">Please enter your first name.</div>
+                </div>
 
-            <!-- Amazon KDP Link (Update href when live) -->
-            <a href="#" class="btn">
-                <div class="btn-title">Amazon KDP / Print Edition</div>
-                <div class="btn-subtitle">Order physical paperback or Kindle version via Amazon.</div>
-            </a>
+                <div class="form-group">
+                    <label for="userSurname">Surname</label>
+                    <input type="text" id="userSurname" placeholder="e.g. Smith">
+                    <div id="surnameError" class="error-msg">Please enter your surname.</div>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="validateAndUnlock()">Download Now</button>
+            </div>
         </div>
+
+        <!-- STEP 2: CHOICE PAGE (Hidden until form is validated) -->
+        <div id="download-section">
+            <h1>CHOOSE YOUR FORMAT</h1>
+            <div class="subtitle">Thank you for joining. Select your preferred format below to download your copy instantly:</div>
+
+            <div class="btn-group">
+                <!-- Direct Auto-Download PDF -->
+                <a href="166Hours.pdf" class="btn" download>
+                    <div class="btn-title">Download PDF Edition</div>
+                    <div class="btn-subtitle">Instant device download for desktop or tablet.</div>
+                </a>
+
+                <!-- Direct Auto-Download ePub -->
+                <a href="166Hours.epub" class="btn" download>
+                    <div class="btn-title">Download ePub Edition</div>
+                    <div class="btn-subtitle">Optimized for Apple Books, Kindle, and e-readers.</div>
+                </a>
+
+                <!-- Amazon KDP Link (Update href when live) -->
+                <a href="#" class="btn">
+                    <div class="btn-title">Amazon KDP / Print Edition</div>
+                    <div class="btn-subtitle">Order physical paperback or Kindle version via Amazon.</div>
+                </a>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+    function validateAndUnlock() {
+        const emailInput = document.getElementById('userEmail');
+        const firstInput = document.getElementById('userFirst');
+        const surnameInput = document.getElementById('userSurname');
+        
+        const emailError = document.getElementById('emailError');
+        const firstError = document.getElementById('firstError');
+        const surnameError = document.getElementById('surnameError');
+        
+        let isValid = true;
+
+        // Validate Email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value || !emailRegex.test(emailInput.value.trim())) {
+            emailError.style.display = 'block';
+            emailInput.style.borderColor = '#ef4444';
+            isValid = false;
+        } else {
+            emailError.style.display = 'none';
+            emailInput.style.borderColor = '#334155';
+        }
+
+        // Validate First Name
+        if (!firstInput.value || firstInput.value.trim() === '') {
+            firstError.style.display = 'block';
+            firstInput.style.borderColor = '#ef4444';
+            isValid = false;
+        } else {
+            firstError.style.display = 'none';
+            firstInput.style.borderColor = '#334155';
+        }
+
+        // Validate Surname
+        if (!surnameInput.value || surnameInput.value.trim() === '') {
+            surnameError.style.display = 'block';
+            surnameInput.style.borderColor = '#ef4444';
+            isValid = false;
+        } else {
+            surnameError.style.display = 'none';
+            surnameInput.style.borderColor = '#334155';
+        }
+
+        // If all fields pass validation, hide the entry gate and reveal the gold format options
+        if (isValid) {
+            document.getElementById('form-section').style.display = 'none';
+            document.getElementById('download-section').style.display = 'block';
+        }
+    }
+    </script>
 </body>
 </html>
