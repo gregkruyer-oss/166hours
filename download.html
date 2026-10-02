@@ -153,27 +153,27 @@
             <h1>GET THE MANUAL</h1>
             <div class="subtitle">Enter your details below to unlock your resources.</div>
             
-            <div class="form-box">
+            <form class="form-box" id="accessForm" onsubmit="handleUnlock(event)">
                 <div class="form-group">
                     <label for="userEmail">Email Address</label>
-                    <input type="email" id="userEmail" placeholder="e.g. name@example.com">
+                    <input type="email" id="userEmail" name="email" autocomplete="email" placeholder="e.g. name@example.com" required>
                     <div id="emailError" class="error-msg">Please enter a valid email address.</div>
                 </div>
 
-                <div class="form-group">
+                <div class="index-group form-group">
                     <label for="userFirst">First Name</label>
-                    <input type="text" id="userFirst" placeholder="e.g. John">
+                    <input type="text" id="userFirst" name="given-name" autocomplete="given-name" placeholder="e.g. John" required>
                     <div id="firstError" class="error-msg">Please enter your first name.</div>
                 </div>
 
                 <div class="form-group">
                     <label for="userSurname">Surname</label>
-                    <input type="text" id="userSurname" placeholder="e.g. Smith">
+                    <input type="text" id="userSurname" name="family-name" autocomplete="family-name" placeholder="e.g. Smith" required>
                     <div id="surnameError" class="error-msg">Please enter your surname.</div>
                 </div>
 
-                <button type="button" class="submit-btn" onclick="validateAndUnlock()">Download Now</button>
-            </div>
+                <button type="submit" class="submit-btn">Download Now</button>
+            </form>
         </div>
 
         <!-- STEP 2: CHOICE PAGE (Hidden until form is validated) -->
@@ -205,50 +205,22 @@
     </div>
 
     <script>
-    function validateAndUnlock() {
+    function handleUnlock(event) {
+        event.preventDefault(); // Stop standard form submission reload
+        
         const emailInput = document.getElementById('userEmail');
         const firstInput = document.getElementById('userFirst');
         const surnameInput = document.getElementById('userSurname');
         
-        const emailError = document.getElementById('emailError');
-        const firstError = document.getElementById('firstError');
-        const surnameError = document.getElementById('surnameError');
-        
         let isValid = true;
 
-        // Validate Email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailInput.value || !emailRegex.test(emailInput.value.trim())) {
-            emailError.style.display = 'block';
-            emailInput.style.borderColor = '#ef4444';
-            isValid = false;
-        } else {
-            emailError.style.display = 'none';
-            emailInput.style.borderColor = '#334155';
-        }
+        // Basic validation checks
+        if (!emailInput.value.trim()) isValid = false;
+        if (!firstInput.value.trim()) isValid = false;
+        if (!surnameInput.value.trim()) isValid = false;
 
-        // Validate First Name
-        if (!firstInput.value || firstInput.value.trim() === '') {
-            firstError.style.display = 'block';
-            firstInput.style.borderColor = '#ef4444';
-            isValid = false;
-        } else {
-            firstError.style.display = 'none';
-            firstInput.style.borderColor = '#334155';
-        }
-
-        // Validate Surname
-        if (!surnameInput.value || surnameInput.value.trim() === '') {
-            surnameError.style.display = 'block';
-            surnameInput.style.borderColor = '#ef4444';
-            isValid = false;
-        } else {
-            surnameError.style.display = 'none';
-            surnameInput.style.borderColor = '#334155';
-        }
-
-        // If all fields pass validation, hide the entry gate and reveal the gold format options
         if (isValid) {
+            // Hide the form gate and show the download format page cleanly
             document.getElementById('form-section').style.display = 'none';
             document.getElementById('download-section').style.display = 'block';
         }
