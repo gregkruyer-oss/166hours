@@ -160,7 +160,7 @@
                     <div id="emailError" class="error-msg">Please enter a valid email address.</div>
                 </div>
 
-                <div class="index-group form-group">
+                <div class="form-group">
                     <label for="userFirst">First Name</label>
                     <input type="text" id="userFirst" name="given-name" autocomplete="given-name" placeholder="e.g. John" required>
                     <div id="firstError" class="error-msg">Please enter your first name.</div>
@@ -179,7 +179,7 @@
         <!-- STEP 2: CHOICE PAGE (Hidden until form is validated) -->
         <div id="download-section">
             <h1>CHOOSE YOUR FORMAT</h1>
-            <div class="subtitle">Thank you for joining. Select your preferred format below to download your copy instantly:</div>
+            <div class="subtitle">Your details have been verified. Select your preferred format below to download your copy instantly:</div>
 
             <div class="btn-group">
                 <!-- Direct Auto-Download PDF -->
@@ -214,13 +214,11 @@
         
         let isValid = true;
 
-        // Basic validation checks
         if (!emailInput.value.trim()) isValid = false;
         if (!firstInput.value.trim()) isValid = false;
         if (!surnameInput.value.trim()) isValid = false;
 
         if (isValid) {
-            // Hide the form gate and show the download format page cleanly
             document.getElementById('form-section').style.display = 'none';
             document.getElementById('download-section').style.display = 'block';
         }
