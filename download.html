@@ -24,17 +24,19 @@
   h1 { font-family: 'Montserrat', sans-serif; font-size: 26px; color: #fff; margin-top: 0; }
   .subtitle { font-size: 0.95rem; color: #94a3b8; margin-bottom: 24px; line-height: 1.5; }
   .form-group { margin-bottom: 16px; text-align: left; }
-  label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 6px; color: #cbd5e1; }
+  label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 6px; color: #cbd5e1; letter-spacing: 0.03em; }
   input { width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #fff; font-size: 15px; box-sizing: border-box; }
-  input:focus { outline: none; border-color: #3b82f6; }
+  input:focus { outline: none; border-color: #B8912F; }
   .error-msg { color: #ef4444; font-size: 12px; margin-top: 4px; display: none; }
-  .submit-btn { width: 100%; background: #3b82f6; color: #fff; border: none; padding: 14px; font-size: 16px; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 8px; }
-  .submit-btn:hover { background: #2563eb; }
+  
+  /* Gold Submit Button */
+  .submit-btn { width: 100%; background: #B8912F; color: #fff; border: none; padding: 14px; font-size: 16px; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 8px; transition: opacity 0.2s; }
+  .submit-btn:hover { opacity: 0.9; }
   
   /* Download Section (Hidden until valid) */
   #download-section { display: none; }
   .btn { display: block; background: #1e293b; color: #fff; text-decoration: none; padding: 16px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #334155; text-align: left; transition: background 0.2s; }
-  .btn:hover { background: #334155; }
+  .btn:hover { background: #334155; border-color: #B8912F; }
   .btn-title { font-size: 1.1rem; font-weight: 700; color: #fff; }
   .btn-subtitle { font-size: 0.85rem; color: #94a3b8; font-family: 'Inter', sans-serif; margin-top: 2px; }
 </style>
