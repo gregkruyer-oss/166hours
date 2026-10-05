@@ -1,156 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Give | 166 Hours</title>
-  
-  <!-- Import Montserrat 900 for Title & Inter for Body -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0B0E14;
-      color: #ffffff;
-      margin: 0;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+    <title>Give | 166 Hours</title>
 
-    .back-link {
-      color: #94A3B8;
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-      transition: color 0.2s ease;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    .back-link:hover {
-      color: #D4AF37;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 550px;
-      width: 100%;
-      text-align: center;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0b0f;
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Montserrat 900 Title Matching Cover/Homepage */
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4.5rem;
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -1px;
-      margin: 0 0 15px 0;
-      text-transform: uppercase;
-      background: linear-gradient(180deg, #FFE8B2 0%, #D4AF37 45%, #8A6510 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.9));
-    }
+        .container {
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-    .subtitle {
-      color: #CBD5E1;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 35px;
-    }
+        .back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 35px;
-    }
+        .back:hover {
+            color: #ffffff;
+        }
 
-    .gold-btn {
-      background: linear-gradient(180deg, #D4AF37 0%, #AA7C11 100%);
-      color: #0B0E14;
-      text-decoration: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 16px 20px;
-      border-radius: 6px;
-      border: 1px solid #F3E5AB;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: block;
-    }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -1px;
+            margin: 0 0 16px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
 
-    .gold-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
-    }
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 36px;
+        }
 
-    .eft-card {
-      background-color: #121824;
-      border: 1px solid #2D3748;
-      border-radius: 8px;
-      padding: 25px;
-      text-align: left;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
 
-    .eft-card h3 {
-      color: #D4AF37;
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      border-bottom: 1px solid #2D3748;
-      padding-bottom: 10px;
-    }
+        .gold-btn {
+            display: block;
+            width: 100%;
+            padding: 17px 20px;
+            background: linear-gradient(135deg, #d4af37, #aa7c11);
+            color: #000000;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-radius: 8px;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
 
-    .eft-details {
-      color: #E2E8F0;
-      font-size: 0.95rem;
-      line-height: 1.8;
-    }
+        .gold-btn:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+        }
 
-    .eft-details strong {
-      color: #94A3B8;
-    }
-  </style>
+        .eft-card {
+            background: #121826;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .eft-card h3 {
+            color: #d4af37;
+            margin: 0 0 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1e293b;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .eft-details {
+            color: #e2e8f0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .eft-details strong {
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 50px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <a href="index.html" class="back-link">&larr; Back to 166 Hours</a>
+<div class="container">
 
-  <div class="container">
+    <a href="index.html" class="back">← Back to 166 Hours</a>
+
     <h1>GIVE</h1>
 
-    <div class="subtitle">
-      The manual is free.<br>
-      Reaching the next Governor with it is not.
-    </div>
+    <p class="subtitle">
+        The manual is free.<br>
+        Reaching the next Governor with it is not.
+    </p>
 
     <div class="button-group">
-      <a href="YOUR_PAYFAST_LINK" class="gold-btn">Give via PayFast</a>
-      <a href="YOUR_PAYPAL_LINK" class="gold-btn">Give via PayPal</a>
+
+        <a href="YOUR_PAYFAST_LINK" class="gold-btn">
+            Give via PayFast
+        </a>
+
+        <a href="YOUR_PAYPAL_LINK" class="gold-btn">
+            Give via PayPal
+        </a>
+
     </div>
 
     <div class="eft-card">
-      <h3>Direct Bank Transfer (EFT)</h3>
-      <div class="eft-details">
-        <strong>Account Name:</strong> [Account Name]<br>
-        <strong>Bank:</strong> [Bank Name]<br>
-        <strong>Account Type:</strong> [Account Type]<br>
-        <strong>Account Number:</strong> [Account Number]<br>
-        <strong>Branch Code:</strong> [Branch Code]<br>
-        <strong>Reference:</strong> 166HOURS
-      </div>
+
+        <h3>Direct Bank Transfer (EFT)</h3>
+
+        <div class="eft-details">
+            <strong>Account Name:</strong> [Account Name]<br>
+            <strong>Bank:</strong> [Bank Name]<br>
+            <strong>Account Type:</strong> [Account Type]<br>
+            <strong>Account Number:</strong> [Account Number]<br>
+            <strong>Branch Code:</strong> [Branch Code]<br>
+            <strong>Reference:</strong> 166HOURS
+        </div>
+
     </div>
-  </div>
+
+</div>
 
 </body>
 </html>
