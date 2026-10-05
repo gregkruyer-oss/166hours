@@ -1,150 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get the Manual | 166 Hours</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0B0E14;
-      color: #ffffff;
-      margin: 0;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+    <title>Get 166 Hours | 166 Hours</title>
 
-    .back-link {
-      color: #94A3B8;
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-bottom: 40px;
-      transition: color 0.2s ease;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    .back-link:hover {
-      color: #D4AF37;
-    }
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0b0f;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-    }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
 
-    h1 {
-      font-family: 'Futura', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin: 0 0 10px 0;
-      text-transform: uppercase;
-      color: #FFFFFF;
-    }
+        .back-link {
+            display: inline-block;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 35px;
+            transition: color 0.2s ease;
+        }
 
-    .subtitle {
-      color: #CBD5E1;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
+        .back-link:hover {
+            color: #d4af37;
+        }
 
-    .form-box {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.8rem, 10vw, 4.5rem);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            margin: 0 0 15px 0;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
 
-    input[type="email"],
-    input[type="text"] {
-      width: 100%;
-      padding: 16px 20px;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      background-color: #FFFFFF;
-      color: #0F172A;
-      font-size: 1rem;
-      box-sizing: border-box;
-      outline: none;
-    }
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
 
-    input[type="email"]::placeholder,
-    input[type="text"]::placeholder {
-      color: #64748B;
-    }
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    .submit-btn {
-      background: linear-gradient(180deg, #D4AF37 0%, #AA7C11 100%);
-      color: #0B0E14;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 16px 20px;
-      border-radius: 6px;
-      border: 1px solid #F3E5AB;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      width: 100%;
-      margin-top: 10px;
-      text-decoration: none;
-      display: inline-block;
-      box-sizing: border-box;
-      text-align: center;
-    }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: #ffffff;
+            color: #0f172a;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+        }
 
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
-    }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+        }
 
-    .footer-note {
-      color: #64748B;
-      font-size: 0.8rem;
-      line-height: 1.5;
-      margin-top: 30px;
-    }
+        input::placeholder {
+            color: #64748b;
+        }
 
-    .built-with {
-      color: #334155;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-top: 25px;
-    }
-  </style>
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            color: #0b0b0f;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        .note {
+            color: #64748b;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 30px 18px;
+            }
+
+            h1 {
+                font-size: clamp(2.7rem, 14vw, 4rem);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <a href="index.html" class="back-link">&larr; Back to 166 Hours</a>
+    <div class="container">
 
-  <div class="container">
-    <h1>GET THE MANUAL</h1>
-    <div class="subtitle">A Piece of Plastic.</div>
+        <a href="index.html" class="back-link">
+            &larr; Back to 166 Hours
+        </a>
 
-    <div class="form-box">
-      <input type="email" placeholder="Email Address" required>
-      <input type="text" placeholder="First Name" required>
-      <input type="text" placeholder="Surname" required>
-      
-      <a href="download.html" class="submit-btn">Download now</a>
+        <h1>GET 166 HOURS</h1>
+
+        <div class="subtitle">
+            Enter your details to access the field manual.
+        </div>
+
+        <form
+            class="form-box"
+            action="https://tally.so/r/VLO7Ra"
+            method="GET"
+        >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+            >
+
+            <input
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+                autocomplete="given-name"
+                required
+            >
+
+            <input
+                type="text"
+                name="surname"
+                placeholder="Surname"
+                autocomplete="family-name"
+                required
+            >
+
+            <button type="submit" class="submit-btn">
+                Continue
+            </button>
+
+        </form>
+
+        <div class="note">
+            Your details are used to provide access to 166 HOURS and communicate with you about the Mandate.
+        </div>
+
     </div>
-
-    <div class="built-with">Built with Kit</div>
-
-    <div class="footer-note">
-      Your details are used to provide access to the manual and communicate with you about the Mandate.
-    </div>
-  </div>
 
 </body>
 </html>
