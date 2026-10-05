@@ -29,52 +29,76 @@
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 42px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: -0.03em;
             margin: 0 0 14px;
             color: #d4af37;
+            text-transform: uppercase;
         }
 
         .subtitle {
-            color: #94a3b8;
+            color: #cbd5e1;
             font-size: 16px;
             line-height: 1.6;
-            margin: 0 0 32px;
+            margin: 0 0 40px;
         }
 
-        .button {
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
             display: block;
             width: 100%;
-            height: 52px;
-            margin: 0 0 14px;
-            padding: 0;
+            padding: 18px 24px;
             background: linear-gradient(135deg, #d4af37, #aa7c11);
             color: #000000;
             text-decoration: none;
             border-radius: 8px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
             font-weight: 700;
-            line-height: 52px;
+            text-align: left;
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
-        .button:hover {
+        .btn:hover {
             opacity: 0.92;
+            transform: translateY(-1px);
+        }
+
+        .btn-title {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .btn-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a1a1a;
         }
 
         .note {
             color: #94a3b8;
             font-size: 13px;
             line-height: 1.5;
-            margin-top: 24px;
+            margin: 28px auto 0;
+            max-width: 500px;
         }
 
         .back {
@@ -111,17 +135,30 @@
         Your access is confirmed. Choose the edition you want.
     </p>
 
-    <a href="#" class="button">
-        DOWNLOAD PDF EDITION
-    </a>
+    <div class="btn-group">
 
-    <a href="#" class="button">
-        DOWNLOAD EPUB EDITION
-    </a>
+        <a href="downloads/166-HOURS.pdf" class="btn" download>
+            <div class="btn-title">Download PDF Edition</div>
+            <div class="btn-subtitle">
+                Instant download for desktop, tablet or mobile.
+            </div>
+        </a>
 
-    <a href="#" class="button">
-        AMAZON KDP / PRINT EDITION
-    </a>
+        <a href="downloads/166-HOURS.epub" class="btn" download>
+            <div class="btn-title">Download ePub Edition</div>
+            <div class="btn-subtitle">
+                Optimized for Apple Books and compatible e-readers.
+            </div>
+        </a>
+
+        <a href="#" class="btn">
+            <div class="btn-title">Amazon KDP / Print Edition</div>
+            <div class="btn-subtitle">
+                Order the print edition through Amazon.
+            </div>
+        </a>
+
+    </div>
 
     <p class="note">
         The digital editions are provided free. Print editions are available through Amazon.
