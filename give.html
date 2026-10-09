@@ -1,19 +1,24 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give | 166 Hours</title>
+
+    <title>166 HOURS | Advance the Mission</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0b0b0f;
+            background: #0b0b0f;
             color: #ffffff;
             margin: 0;
             padding: 40px 20px;
@@ -22,126 +27,158 @@
             justify-content: center;
             align-items: center;
         }
+
         .container {
             width: 100%;
-            max-width: 550px;
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
-        .back {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .back:hover {
-            color: #ffffff;
-        }
+
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 64px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 900;
-            line-height: 1;
-            letter-spacing: -1px;
-            margin: 0 0 16px;
+            letter-spacing: -0.03em;
+            margin: 0 0 18px;
             color: #d4af37;
-            text-transform: uppercase;
         }
+
         .subtitle {
             color: #cbd5e1;
             font-size: 16px;
-            line-height: 1.6;
-            margin: 0 0 36px;
+            line-height: 1.7;
+            margin: 0 auto 18px;
+            max-width: 540px;
         }
-        .button-group {
+
+        .statement {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0 auto 36px;
+        }
+
+        .btn-group {
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 32px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .gold-btn {
+
+        .btn {
             display: block;
             width: 100%;
-            padding: 17px 20px;
+            padding: 18px 24px;
             background: linear-gradient(135deg, #d4af37, #aa7c11);
             color: #000000;
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
             border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-align: left;
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
-        .gold-btn:hover {
+
+        .btn:hover {
             opacity: 0.92;
             transform: translateY(-1px);
         }
-        .eft-card {
-            background: #121826;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 24px;
-            text-align: left;
-        }
-        .eft-card h3 {
-            color: #d4af37;
-            margin: 0 0 16px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #1e293b;
-            font-family: 'Montserrat', sans-serif;
+
+        .btn-title {
             font-size: 16px;
-            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
         }
-        .eft-details {
-            color: #e2e8f0;
-            font-size: 14px;
-            line-height: 1.8;
+
+        .btn-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.5;
         }
-        .eft-details strong {
+
+        .note {
             color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 28px auto 0;
+            max-width: 500px;
         }
+
+        .back {
+            display: inline-block;
+            margin-top: 28px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: #ffffff;
+        }
+
         @media (max-width: 600px) {
-            h1 {
-                font-size: 50px;
+            body {
+                padding: 30px 20px;
             }
         }
     </style>
 </head>
+
 <body>
+
 <div class="container">
-    <a href="index.html" class="back">← Back to 166 Hours</a>
-    
-    <h1>GIVE</h1>
-    
+
+    <h1>ADVANCE THE MISSION</h1>
+
     <p class="subtitle">
-        The manual is free.<br>
-        Reaching the next Governor with it is not.
+        The manual is free. Reaching the next Governor with it is not.
     </p>
 
-    <div class="button-group">
-        <a href="https://paystack.shop/pay/166hours" class="gold-btn">
-            Give Once
+    <p class="statement">
+        Help put 166 HOURS into more hands.
+    </p>
+
+    <div class="btn-group">
+
+        <a href="https://paystack.shop/pay/166hours"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="btn-title">Give via Paystack</div>
+            <div class="btn-subtitle">
+                Open the 166 HOURS giving page.
+            </div>
         </a>
-        
-        <a href="https://paystack.shop/pay/fywmlolsfd" class="gold-btn">
-            Become a Monthly Partner
+
+        <a href="https://paystack.shop/pay/fywmlolsfd"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="btn-title">Support the Mission</div>
+            <div class="btn-subtitle">
+                Open the alternative Paystack payment page.
+            </div>
         </a>
+
     </div>
 
-    <div class="eft-card">
-        <h3>Direct Bank Transfer (EFT)</h3>
-        <div class="eft-details">
-            <strong>Account Name:</strong> [Account Name]<br>
-            <strong>Bank:</strong> [Bank Name]<br>
-            <strong>Account Type:</strong> [Account Type]<br>
-            <strong>Account Number:</strong> [Account Number]<br>
-            <strong>Branch Code:</strong> [Branch Code]<br>
-            <strong>Reference:</strong> 166HOURS
-        </div>
-    </div>
+    <p class="note">
+        Your support helps the mission reach more people. The digital manual remains free.
+    </p>
+
+    <a href="index.html" class="back">← Back to 166 HOURS</a>
+
 </div>
+
 </body>
 </html>
+```
