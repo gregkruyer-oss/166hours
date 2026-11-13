@@ -102,13 +102,20 @@
             padding: 18px 24px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-            transition: transform 0.2s ease, opacity 0.2s ease;
             box-sizing: border-box;
         }
 
-        .btn:hover {
+        /* Static container variant for status display */
+        .btn-status {
+            cursor: default;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+
+        .btn-interactive:hover {
             transform: translateY(-2px);
             opacity: 0.95;
+            transition: transform 0.2s ease, opacity 0.2s ease;
         }
 
         .btn-title {
@@ -181,17 +188,17 @@
 
         <div class="btn-group">
 
-            <!-- GET 166 HOURS -->
-            <a href="1.html" class="btn">
-                <div class="btn-title">Get 166 Hours</div>
+            <!-- AMAZON EXCLUSIVE STATUS NOTICE (NON-CLICKABLE) -->
+            <div class="btn btn-status">
+                <div class="btn-title">Available on Amazon</div>
                 <div class="btn-subtitle">
-                    Access the field manual and deploy the mandate.
+                    Digital edition exclusive to Kindle Select.
                 </div>
-            </a>
+            </div>
 
             <!-- UNDERWRITE THE ADVANCE -->
-           <a href="give.html"
-               class="btn"
+            <a href="give.html"
+               class="btn btn-interactive"
                target="_blank"
                rel="noopener noreferrer">
 
@@ -203,19 +210,17 @@
             </a>
 
             <!-- TELL YOUR STORY -->
-          
-<!-- TELL YOUR STORY -->
-<a href="https://tally.so/r/yPKNPB"
-   class="btn"
-   target="_blank"
-   rel="noopener noreferrer">
+            <a href="https://tally.so/r/yPKNPB"
+               class="btn btn-interactive"
+               target="_blank"
+               rel="noopener noreferrer">
 
-    <div class="btn-title">Tell Your Story</div>
-    <div class="btn-subtitle">
-        What happened when you stopped walking past it?
-    </div>
+                <div class="btn-title">Tell Your Story</div>
+                <div class="btn-subtitle">
+                    What happened when you stopped walking past it?
+                </div>
 
-</a>
+            </a>
 
         </div>
 
